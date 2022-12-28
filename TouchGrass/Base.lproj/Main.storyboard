@@ -61,34 +61,23 @@
             <objects>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="XfG-lQ-9wD" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="0wp-mZ-ms7">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                    <view key="view" wantsLayer="YES" id="0wp-mZ-ms7" customClass="WindowView" customModule="TouchGrass" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <backgroundFilters>
-                            <ciFilter name="CIGaussianBlur">
-                                <configuration>
-                                    <null key="inputImage"/>
-                                    <real key="inputRadius" value="100"/>
-                                </configuration>
-                            </ciFilter>
-                            <ciFilter name="CISpotColor">
-                                <configuration>
-                                    <ciColor key="inputCenterColor1" red="0.078399999999999997" green="0.062700000000000006" blue="0.070599999999999996" alpha="1"/>
-                                    <ciColor key="inputCenterColor2" red="0.52549999999999997" green="0.30590000000000001" blue="0.34510000000000002" alpha="1"/>
-                                    <ciColor key="inputCenterColor3" red="0.92159999999999997" green="0.45490000000000003" blue="0.33329999999999999" alpha="1"/>
-                                    <real key="inputCloseness1" value="0.22"/>
-                                    <real key="inputCloseness2" value="0.14999999999999999"/>
-                                    <real key="inputCloseness3" value="0.5"/>
-                                    <real key="inputContrast1" value="0.97999999999999998"/>
-                                    <real key="inputContrast2" value="0.97999999999999998"/>
-                                    <real key="inputContrast3" value="0.98999999999999999"/>
-                                    <null key="inputImage"/>
-                                    <ciColor key="inputReplacementColor1" red="0.43919999999999998" green="0.19220000000000001" blue="0.1961" alpha="1"/>
-                                    <ciColor key="inputReplacementColor2" red="0.91369999999999996" green="0.56079999999999997" blue="0.50590000000000002" alpha="1"/>
-                                    <ciColor key="inputReplacementColor3" red="0.90980000000000005" green="0.75290000000000001" blue="0.60780000000000001" alpha="1"/>
-                                </configuration>
-                            </ciFilter>
-                        </backgroundFilters>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5OJ-1B-rGL">
+                                <rect key="frame" x="23" y="35" width="154" height="31"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Toggle Audio" id="d27-39-Myq">
+                                    <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
+                                    <color key="textColor" red="0.00030971876654310677" green="0.37671087206024489" blue="0.022179684812137036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5OJ-1B-rGL" firstAttribute="centerX" secondItem="0wp-mZ-ms7" secondAttribute="centerX" id="X2I-oV-NI7"/>
+                            <constraint firstItem="5OJ-1B-rGL" firstAttribute="centerY" secondItem="0wp-mZ-ms7" secondAttribute="centerY" id="drf-4w-Da4"/>
+                        </constraints>
                     </view>
                 </viewController>
             </objects>

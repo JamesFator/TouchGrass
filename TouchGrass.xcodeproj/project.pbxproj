@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A423CEFA295CD86600462C6A /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423CEF9295CD86600462C6A /* WindowView.swift */; };
 		A4DD9AC8295CBEB8005DDA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD9AC7295CBEB8005DDA17 /* AppDelegate.swift */; };
 		A4DD9ACA295CBEB8005DDA17 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD9AC9295CBEB8005DDA17 /* WindowController.swift */; };
 		A4DD9ACC295CBEBA005DDA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DD9ACB295CBEBA005DDA17 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A423CEF9295CD86600462C6A /* WindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		A4DD9AC4295CBEB8005DDA17 /* TouchGrass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchGrass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DD9AC7295CBEB8005DDA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4DD9AC9295CBEB8005DDA17 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				A4DD9AD6295CC024005DDA17 /* GrassView.swift */,
 				A4DD9AD8295CC060005DDA17 /* BladeLayer.swift */,
 				A4DD9ACD295CBEBA005DDA17 /* Main.storyboard */,
+				A423CEF9295CD86600462C6A /* WindowView.swift */,
 				A4DD9AD0295CBEBA005DDA17 /* TouchGrass.entitlements */,
 			);
 			path = TouchGrass;
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4DD9AD9295CC060005DDA17 /* BladeLayer.swift in Sources */,
+				A423CEFA295CD86600462C6A /* WindowView.swift in Sources */,
 				A4DD9ACA295CBEB8005DDA17 /* WindowController.swift in Sources */,
 				A4DD9AC8295CBEB8005DDA17 /* AppDelegate.swift in Sources */,
 				A4DD9AD7295CC024005DDA17 /* GrassView.swift in Sources */,
