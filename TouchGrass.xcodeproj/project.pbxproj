@@ -11,6 +11,9 @@
 		A4DD9ACA295CBEB8005DDA17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD9AC9295CBEB8005DDA17 /* ViewController.swift */; };
 		A4DD9ACC295CBEBA005DDA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DD9ACB295CBEBA005DDA17 /* Assets.xcassets */; };
 		A4DD9ACF295CBEBA005DDA17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4DD9ACD295CBEBA005DDA17 /* Main.storyboard */; };
+		A4DD9AD7295CC024005DDA17 /* GrassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD9AD6295CC024005DDA17 /* GrassView.swift */; };
+		A4DD9AD9295CC060005DDA17 /* BladeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD9AD8295CC060005DDA17 /* BladeLayer.swift */; };
+		A4DD9AF6295CCDC0005DDA17 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD9AF5295CCDC0005DDA17 /* DefaultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		A4DD9ACB295CBEBA005DDA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4DD9ACE295CBEBA005DDA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4DD9AD0295CBEBA005DDA17 /* TouchGrass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TouchGrass.entitlements; sourceTree = "<group>"; };
+		A4DD9AD6295CC024005DDA17 /* GrassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassView.swift; sourceTree = "<group>"; };
+		A4DD9AD8295CC060005DDA17 /* BladeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BladeLayer.swift; sourceTree = "<group>"; };
+		A4DD9AF5295CCDC0005DDA17 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,10 @@
 			children = (
 				A4DD9AC7295CBEB8005DDA17 /* AppDelegate.swift */,
 				A4DD9AC9295CBEB8005DDA17 /* ViewController.swift */,
+				A4DD9AF5295CCDC0005DDA17 /* DefaultView.swift */,
 				A4DD9ACB295CBEBA005DDA17 /* Assets.xcassets */,
+				A4DD9AD6295CC024005DDA17 /* GrassView.swift */,
+				A4DD9AD8295CC060005DDA17 /* BladeLayer.swift */,
 				A4DD9ACD295CBEBA005DDA17 /* Main.storyboard */,
 				A4DD9AD0295CBEBA005DDA17 /* TouchGrass.entitlements */,
 			);
@@ -131,8 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DD9AD9295CC060005DDA17 /* BladeLayer.swift in Sources */,
 				A4DD9ACA295CBEB8005DDA17 /* ViewController.swift in Sources */,
 				A4DD9AC8295CBEB8005DDA17 /* AppDelegate.swift in Sources */,
+				A4DD9AD7295CC024005DDA17 /* GrassView.swift in Sources */,
+				A4DD9AF6295CCDC0005DDA17 /* DefaultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

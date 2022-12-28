@@ -7,20 +7,30 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSWindowController {
+    
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+extension ViewController: NSTouchBarDelegate {
+    
+    override func makeTouchBar() -> NSTouchBar? {
+        let touchBar = NSTouchBar()
+        touchBar.delegate = self
+        touchBar.defaultItemIdentifiers = [NSTouchBarItem.Identifier("jamesfator.TouchGrass.touchBar")]
+        
+        return touchBar
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    // The system calls this while constructing the NSTouchBar for each NSTouchBarItem you want to create.
+    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+        let canvasView = GrassView()
+        canvasView.allowedTouchTypes = .direct
+        
+        let custom = NSCustomTouchBarItem(identifier: identifier)
+        custom.view = canvasView
+        
+        return custom
     }
-
-
+    
 }
 
