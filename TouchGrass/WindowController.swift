@@ -7,11 +7,11 @@
 
 import Cocoa
 
-class ViewController: NSWindowController {
+class WindowController: NSWindowController {
     
 }
 
-extension ViewController: NSTouchBarDelegate {
+extension WindowController: NSTouchBarDelegate {
     
     override func makeTouchBar() -> NSTouchBar? {
         let touchBar = NSTouchBar()
