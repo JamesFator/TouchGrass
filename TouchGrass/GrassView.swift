@@ -71,7 +71,6 @@ class GrassView: NSView {
             let actualTouches = relevantTouches.filter({ $0.type == .direct && $0.identity.isEqual(trackingTouchIdentity) })
             if let trackingTouch = actualTouches.first {
                 self.trackingTouchIdentity = nil
-                let location = trackingTouch.location(in: self)
                 lastLocation = nil
             }
         }
