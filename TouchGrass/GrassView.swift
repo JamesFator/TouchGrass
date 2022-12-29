@@ -14,13 +14,14 @@ class GrassView: NSView {
     
     var lastLocation: NSPoint?
     
+    ///
+    /// Touch logic mostly taken from https://developer.apple.com/documentation/appkit/touch_bar/integrating_a_toolbar_and_touch_bar_into_your_app
+    ///
+    
     // This is to keep the current tracking touch (figure).
     // NSTouchBar supports multiple touches, but since it has only 30-point height,
     // it is reasonable to only track one touch.
     var trackingTouchIdentity: AnyObject?
-    
-    // Marked as dynamic for this property to support KVO.
-    @objc dynamic var trackingLocationString = ""
     
     // NSView by default doesn't accept first responder, so override this to allow it.
     override var acceptsFirstResponder: Bool { return true }
@@ -32,7 +33,6 @@ class GrassView: NSView {
             if let touch = event.touches(matching: .began, in: self).first, touch.type == .direct {
                 trackingTouchIdentity = touch.identity
                 let location = touch.location(in: self)
-                trackingLocationString = String(format: NSLocalizedString("Began At", comment: ""), location.x)
                 lastLocation = location
             }
         }
@@ -45,7 +45,6 @@ class GrassView: NSView {
             let actualTouches = relevantTouches.filter({ $0.type == .direct && $0.identity.isEqual(trackingTouchIdentity) })
             if let trackingTouch = actualTouches.first {
                 let location = trackingTouch.location(in: self)
-                trackingLocationString = String(format: NSLocalizedString("Moved At", comment: ""), location.x)
                 var force = 0.0
                 if location.x > lastLocation!.x {
                     force = 10.0
@@ -73,27 +72,10 @@ class GrassView: NSView {
             if let trackingTouch = actualTouches.first {
                 self.trackingTouchIdentity = nil
                 let location = trackingTouch.location(in: self)
-                trackingLocationString = String(format: NSLocalizedString("Ended At", comment: ""), location.x)
                 lastLocation = nil
             }
         }
         super.touchesEnded(with: event)
-    }
-    
-    override func touchesCancelled(with event: NSEvent) {
-        if let trackingTouchIdentity = trackingTouchIdentity {
-            let relevantTouches = event.touches(matching: .cancelled, in: self)
-            let actualTouches = relevantTouches.filter({ $0.type == .direct && $0.identity.isEqual(trackingTouchIdentity) })
-            if let trackingTouch = actualTouches.first {
-                self.trackingTouchIdentity = nil
-                let location = trackingTouch.location(in: self)
-                trackingLocationString = String(format: NSLocalizedString("Cancelled At", comment: ""), location.x)
-                
-                // The system is cancelling the touch, so roll back to the status before touchBegan.
-                //...
-            }
-        }
-        super.touchesCancelled(with: event)
     }
     
     override var wantsUpdateLayer: Bool {
